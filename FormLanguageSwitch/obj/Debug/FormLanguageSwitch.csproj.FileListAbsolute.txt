@@ -1,0 +1,6 @@
+D:\01.VuongHN\Project\warehouseIT\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.dll
+D:\01.VuongHN\Project\warehouseIT\FormLanguageSwitch\bin\Debug\FormLanguageSwitch.pdb
+D:\01.VuongHN\Project\warehouseIT\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.csproj.AssemblyReference.cache
+D:\01.VuongHN\Project\warehouseIT\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.csproj.CoreCompileInputs.cache
+D:\01.VuongHN\Project\warehouseIT\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.dll
+D:\01.VuongHN\Project\warehouseIT\FormLanguageSwitch\obj\Debug\FormLanguageSwitch.pdb

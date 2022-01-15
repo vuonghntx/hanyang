@@ -1,0 +1,813 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{776EEAC6-8112-4A2F-AA20-85E9AA195C5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>warehouseIT</RootNamespace>
+    <AssemblyName>warehouseIT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>warehouse.ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.XtraGauges.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Categorys\frmListLotReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmListLotReceipt.Designer.cs">
+      <DependentUpon>frmListLotReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmSupplier_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmSupplier_Action.Designer.cs">
+      <DependentUpon>frmSupplier_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmListLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmListLot.Designer.cs">
+      <DependentUpon>frmListLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmListLot_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmListLot_Action.Designer.cs">
+      <DependentUpon>frmListLot_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmEmployee_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmEmployee_Action.Designer.cs">
+      <DependentUpon>frmEmployee_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmDepot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmDepot.Designer.cs">
+      <DependentUpon>frmDepot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmDepot_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmDepot_Action.Designer.cs">
+      <DependentUpon>frmDepot_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassReference\ConvertDateTime.cs" />
+    <Compile Include="ClassReference\EncodeMD5.cs" />
+    <Compile Include="Categorys\frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmDepartment.Designer.cs">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmProductGr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmProductGr.Designer.cs">
+      <DependentUpon>frmProductGr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmProduct_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmProduct_Action.Designer.cs">
+      <DependentUpon>frmProduct_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmDepartment_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmDepartment_Action.Designer.cs">
+      <DependentUpon>frmDepartment_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorys\frmProductGr_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorys\frmProductGr_Action.Designer.cs">
+      <DependentUpon>frmProductGr_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindProduct\frmFindProductInventoryDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindProduct\frmFindProductInventoryDepartment.Designer.cs">
+      <DependentUpon>frmFindProductInventoryDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindProduct\frmFindProductInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindProduct\frmFindProductInventory.Designer.cs">
+      <DependentUpon>frmFindProductInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindProduct\frmFindProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindProduct\frmFindProduct.Designer.cs">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmExportReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmExportReturn.Designer.cs">
+      <DependentUpon>frmExportReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListExReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListExReturn.Designer.cs">
+      <DependentUpon>frmListExReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListExReturnFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListExReturnFind.Designer.cs">
+      <DependentUpon>frmListExReturnFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\frmKiemKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\frmKiemKe.Designer.cs">
+      <DependentUpon>frmKiemKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmInventoryDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmInventoryDepartment.Designer.cs">
+      <DependentUpon>frmInventoryDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmWarehouseCardDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmWarehouseCardDetail.Designer.cs">
+      <DependentUpon>frmWarehouseCardDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmWarehouseCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmWarehouseCard.Designer.cs">
+      <DependentUpon>frmWarehouseCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmInventory.Designer.cs">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLanguage.Designer.cs">
+      <DependentUpon>frmLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmExportAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmExportAllocation.Designer.cs">
+      <DependentUpon>frmExportAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListAllocation.Designer.cs">
+      <DependentUpon>frmListAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListAllocationFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Allocation\frmListAllocationFind.Designer.cs">
+      <DependentUpon>frmListAllocationFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Receipts\frmImportNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Receipts\frmImportNew.Designer.cs">
+      <DependentUpon>frmImportNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Receipts\frmListReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Receipts\frmListReceipt.Designer.cs">
+      <DependentUpon>frmListReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Receipts\frmListReceiptFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Receipts\frmListReceiptFind.Designer.cs">
+      <DependentUpon>frmListReceiptFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Returns\frmImportReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Returns\frmImportReturn.Designer.cs">
+      <DependentUpon>frmImportReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Returns\frmListReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Returns\frmListReturn.Designer.cs">
+      <DependentUpon>frmListReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportExport\Returns\frmListReturnFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExport\Returns\frmListReturnFind.Designer.cs">
+      <DependentUpon>frmListReturnFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmGroupUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmGroupUser.Designer.cs">
+      <DependentUpon>frmGroupUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmPermission.Designer.cs">
+      <DependentUpon>frmPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmGroupUser_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmGroupUser_Action.Designer.cs">
+      <DependentUpon>frmGroupUser_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmUser_Action.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmUser_Action.Designer.cs">
+      <DependentUpon>frmUser_Action.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmGrantPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsAdmin\frmGrantPermission.Designer.cs">
+      <DependentUpon>frmGrantPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClassReference\saveConfigRegedit.cs" />
+    <EmbeddedResource Include="Categorys\frmListLotReceipt.en.resx">
+      <DependentUpon>frmListLotReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLotReceipt.ko.resx">
+      <DependentUpon>frmListLotReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLotReceipt.resx">
+      <DependentUpon>frmListLotReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLotReceipt.vi.resx">
+      <DependentUpon>frmListLotReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier.en.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier.ko.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier.vi.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier_Action.en.resx">
+      <DependentUpon>frmSupplier_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier_Action.ko.resx">
+      <DependentUpon>frmSupplier_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier_Action.resx">
+      <DependentUpon>frmSupplier_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmSupplier_Action.vi.resx">
+      <DependentUpon>frmSupplier_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot.en.resx">
+      <DependentUpon>frmListLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot.ko.resx">
+      <DependentUpon>frmListLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot.resx">
+      <DependentUpon>frmListLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot.vi.resx">
+      <DependentUpon>frmListLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot_Action.en.resx">
+      <DependentUpon>frmListLot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot_Action.ko.resx">
+      <DependentUpon>frmListLot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot_Action.resx">
+      <DependentUpon>frmListLot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmListLot_Action.vi.resx">
+      <DependentUpon>frmListLot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee.en.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee.ko.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee.vi.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee_Action.en.resx">
+      <DependentUpon>frmEmployee_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee_Action.ko.resx">
+      <DependentUpon>frmEmployee_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmEmployee_Action.resx">
+      <DependentUpon>frmEmployee_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot.en.resx">
+      <DependentUpon>frmDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot.ko.resx">
+      <DependentUpon>frmDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot.resx">
+      <DependentUpon>frmDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot.vi.resx">
+      <DependentUpon>frmDepot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment.en.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot_Action.en.resx">
+      <DependentUpon>frmDepot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot_Action.ko.resx">
+      <DependentUpon>frmDepot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot_Action.resx">
+      <DependentUpon>frmDepot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepot_Action.vi.resx">
+      <DependentUpon>frmDepot_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment_Action.en.resx">
+      <DependentUpon>frmDepartment_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr.en.resx">
+      <DependentUpon>frmProductGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr_Action.en.resx">
+      <DependentUpon>frmProductGr_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct_Action.en.resx">
+      <DependentUpon>frmProduct_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct.en.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct.ko.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct.vi.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment.ko.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment.vi.resx">
+      <DependentUpon>frmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr.ko.resx">
+      <DependentUpon>frmProductGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr.resx">
+      <DependentUpon>frmProductGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr.vi.resx">
+      <DependentUpon>frmProductGr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct_Action.ko.resx">
+      <DependentUpon>frmProduct_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct_Action.resx">
+      <DependentUpon>frmProduct_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProduct_Action.vi.resx">
+      <DependentUpon>frmProduct_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment_Action.ko.resx">
+      <DependentUpon>frmDepartment_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment_Action.resx">
+      <DependentUpon>frmDepartment_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmDepartment_Action.vi.resx">
+      <DependentUpon>frmDepartment_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr_Action.ko.resx">
+      <DependentUpon>frmProductGr_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr_Action.resx">
+      <DependentUpon>frmProductGr_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\frmProductGr_Action.vi.resx">
+      <DependentUpon>frmProductGr_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorys\XtraForm1.resx">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventoryDepartment.en.resx">
+      <DependentUpon>frmFindProductInventoryDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventoryDepartment.ko.resx">
+      <DependentUpon>frmFindProductInventoryDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventoryDepartment.resx">
+      <DependentUpon>frmFindProductInventoryDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventoryDepartment.vi.resx">
+      <DependentUpon>frmFindProductInventoryDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventory.en.resx">
+      <DependentUpon>frmFindProductInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventory.ko.resx">
+      <DependentUpon>frmFindProductInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventory.resx">
+      <DependentUpon>frmFindProductInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProductInventory.vi.resx">
+      <DependentUpon>frmFindProductInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProduct.en.resx">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProduct.ko.resx">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProduct.resx">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindProduct\frmFindProduct.vi.resx">
+      <DependentUpon>frmFindProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportReturn.af-NA.resx">
+      <DependentUpon>frmExportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportReturn.en.resx">
+      <DependentUpon>frmExportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportReturn.ko.resx">
+      <DependentUpon>frmExportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportReturn.resx">
+      <DependentUpon>frmExportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportAllocation.af-NA.resx">
+      <DependentUpon>frmExportAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportAllocation.en.resx">
+      <DependentUpon>frmExportAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportAllocation.ko.resx">
+      <DependentUpon>frmExportAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListExReturn.resx">
+      <DependentUpon>frmListExReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListExReturnFind.en.resx">
+      <DependentUpon>frmListExReturnFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListExReturnFind.ko.resx">
+      <DependentUpon>frmListExReturnFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListExReturnFind.resx">
+      <DependentUpon>frmListExReturnFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListAllocationFind.en.resx">
+      <DependentUpon>frmListAllocationFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListAllocationFind.ko.resx">
+      <DependentUpon>frmListAllocationFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\frmKiemKe.af-NA.resx">
+      <DependentUpon>frmKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\frmKiemKe.en.resx">
+      <DependentUpon>frmKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\frmKiemKe.ko.resx">
+      <DependentUpon>frmKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\frmKiemKe.resx">
+      <DependentUpon>frmKiemKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Receipts\frmImportNew.en.resx">
+      <DependentUpon>frmImportNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Receipts\frmImportNew.ko.resx">
+      <DependentUpon>frmImportNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Returns\frmImportReturn.en.resx">
+      <DependentUpon>frmImportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Returns\frmImportReturn.ko.resx">
+      <DependentUpon>frmImportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\frmInventoryDepartment.resx">
+      <DependentUpon>frmInventoryDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmWarehouseCardDetail.resx">
+      <DependentUpon>frmWarehouseCardDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmWarehouseCard.resx">
+      <DependentUpon>frmWarehouseCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmInventory.resx">
+      <DependentUpon>frmInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.en.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.ko.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.vi.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLanguage.resx">
+      <DependentUpon>frmLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.en.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.ko-KR.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.ko.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.vi.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmExportAllocation.resx">
+      <DependentUpon>frmExportAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListAllocation.resx">
+      <DependentUpon>frmListAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Allocation\frmListAllocationFind.resx">
+      <DependentUpon>frmListAllocationFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Receipts\frmImportNew.resx">
+      <DependentUpon>frmImportNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Receipts\frmListReceipt.resx">
+      <DependentUpon>frmListReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Receipts\frmListReceiptFind.resx">
+      <DependentUpon>frmListReceiptFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Returns\frmImportReturn.resx">
+      <DependentUpon>frmImportReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Returns\frmListReturn.resx">
+      <DependentUpon>frmListReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExport\Returns\frmListReturnFind.resx">
+      <DependentUpon>frmListReturnFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser.en.resx">
+      <DependentUpon>frmGroupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser.ko.resx">
+      <DependentUpon>frmGroupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser.resx">
+      <DependentUpon>frmGroupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser.vi.resx">
+      <DependentUpon>frmGroupUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser_Action.en.resx">
+      <DependentUpon>frmGroupUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmPermission.en.resx">
+      <DependentUpon>frmPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmPermission.ko.resx">
+      <DependentUpon>frmPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmPermission.resx">
+      <DependentUpon>frmPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmPermission.vi.resx">
+      <DependentUpon>frmPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser.en.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser.ko.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser_Action.ko.resx">
+      <DependentUpon>frmGroupUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser_Action.resx">
+      <DependentUpon>frmGroupUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGroupUser_Action.vi.resx">
+      <DependentUpon>frmGroupUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser.vi.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser_Action.en.resx">
+      <DependentUpon>frmUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser_Action.ko.resx">
+      <DependentUpon>frmUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser_Action.resx">
+      <DependentUpon>frmUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmUser_Action.vi.resx">
+      <DependentUpon>frmUser_Action.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsAdmin\frmGrantPermission.resx">
+      <DependentUpon>frmGrantPermission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FormLanguageSwitch\FormLanguageSwitch.csproj">
+      <Project>{3482ed79-26b3-423d-a813-f3e233ae8ef3}</Project>
+      <Name>FormLanguageSwitch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LayerLogicData\LayerLogicData.csproj">
+      <Project>{35e314ea-d2ea-4f2e-a031-5f50a901689d}</Project>
+      <Name>LayerLogicData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LayerObjectData\LayerObjectData.csproj">
+      <Project>{4d12d27d-b068-488e-890b-422405f49248}</Project>
+      <Name>LayerObjectData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="warehouse.ico.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

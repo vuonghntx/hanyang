@@ -1,0 +1,10 @@
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\bin\Debug\LayerLogicData.dll.config
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\bin\Debug\LayerLogicData.dll
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\bin\Debug\LayerLogicData.pdb
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\bin\Debug\LayerObjectData.dll
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\bin\Debug\LayerObjectData.pdb
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\obj\Debug\LayerLogicData.csproj.AssemblyReference.cache
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\obj\Debug\LayerLogicData.csproj.CoreCompileInputs.cache
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\obj\Debug\LayerLogicData.csproj.CopyComplete
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\obj\Debug\LayerLogicData.dll
+D:\01.VuongHN\Project\warehouseIT\LayerLogicData\obj\Debug\LayerLogicData.pdb

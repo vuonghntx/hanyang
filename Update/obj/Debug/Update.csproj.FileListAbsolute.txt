@@ -1,0 +1,10 @@
+D:\01.VuongHN\Project\warehouseIT\Update\bin\Debug\Update.exe.config
+D:\01.VuongHN\Project\warehouseIT\Update\bin\Debug\Update.exe
+D:\01.VuongHN\Project\warehouseIT\Update\bin\Debug\Update.pdb
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.csproj.AssemblyReference.cache
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.Properties.Resources.resources
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.Update.resources
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.csproj.GenerateResource.cache
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.csproj.CoreCompileInputs.cache
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.exe
+D:\01.VuongHN\Project\warehouseIT\Update\obj\Debug\Update.pdb

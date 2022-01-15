@@ -1,0 +1,6 @@
+D:\01.VuongHN\Project\warehouseIT\LayerObjectData\bin\Debug\LayerObjectData.dll
+D:\01.VuongHN\Project\warehouseIT\LayerObjectData\bin\Debug\LayerObjectData.pdb
+D:\01.VuongHN\Project\warehouseIT\LayerObjectData\obj\Debug\LayerObjectData.csproj.AssemblyReference.cache
+D:\01.VuongHN\Project\warehouseIT\LayerObjectData\obj\Debug\LayerObjectData.csproj.CoreCompileInputs.cache
+D:\01.VuongHN\Project\warehouseIT\LayerObjectData\obj\Debug\LayerObjectData.dll
+D:\01.VuongHN\Project\warehouseIT\LayerObjectData\obj\Debug\LayerObjectData.pdb
